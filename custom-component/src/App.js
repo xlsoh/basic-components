@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Toggle from './components/Toggle';
 import Modal from './components/Modal';
-import './components/Tab';
+import Tab from './components/Tab';
 import './components/Tag';
 import './components/AutoComplete';
 import './components/ClickToEdit';
@@ -16,6 +16,10 @@ function App() {
       <br />
       <Title>Modal</Title>
       <Modal />
+      <br />
+      <br />
+      <Title>Tab</Title>
+      <Tab />
     </AppContainer>
   );
 }
