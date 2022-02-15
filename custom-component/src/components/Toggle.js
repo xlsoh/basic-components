@@ -23,7 +23,6 @@ export default Toggle;
 
 const Wrapper = styled.div`
   box-sizing: border-box;
-  // margin: 0 5px;
   width: 70%; //너비
   height: 25%; //높이
   border: 1px solid #e1e5d9;
@@ -42,19 +41,18 @@ const Container = styled.div`
   margin: 0 5px;
   width: 80px;
   height: 35px;
-  border: 2px solid #e1e5d9;
   border-radius: 35px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  background-color: ${({ value }) => (value ? 'white' : 'black')};
+  background-color: ${({ value }) => (value ? '#c3ff00' : '#9A9A9A')};
 `;
 
 const Circle = styled.div`
-  width: 23px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  background-color: #c3ff00;
+  background-color: #ffffff;
   margin: 0 5px;
   transform: ${({ value }) => (value ? 'translateX(43px)' : 'translate(0px)')};
   transition: all 0.2s ease-in-out;

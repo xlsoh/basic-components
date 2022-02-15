@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export default function Modal(params) {
   const [modal, setModal] = useState(false);
@@ -17,7 +17,7 @@ export default function Modal(params) {
       ) : (
         <ModalBackground>
           <ModalContainer>
-            Hello Modal!
+            Hello ☺︎
             <CloseButton onClick={handleModal}>Close</CloseButton>
           </ModalContainer>
         </ModalBackground>
@@ -74,8 +74,8 @@ const ModalBackground = styled.div`
 const ModalContainer = styled.div`
   box-sizing: border-box;
   padding: 5px;
-  width: 300px;
-  height: 150px;
+  width: 80%;
+  height: 70%;
   border-radius: 12px;
   background-color: #ffffff;
   display: flex;

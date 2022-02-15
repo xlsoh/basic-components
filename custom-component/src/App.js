@@ -13,10 +13,8 @@ function App() {
       <Title> Toggle</Title>
       <Toggle />
       <br />
-      <br />
       <Title>Modal</Title>
       <Modal />
-      <br />
       <br />
       <Title>Tab</Title>
       <Tab />
@@ -33,6 +31,8 @@ const AppContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex; //고른 배열
+  padding-top: 3em;
+  padding-bottom: 5em;
   flex-direction: column;
   justify-content: center; // 콘텐츠 열 중앙
   align-items: center; //콘텐츠 행 중앙
