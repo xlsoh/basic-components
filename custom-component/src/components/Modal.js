@@ -42,14 +42,15 @@ const OpenButton = styled.div`
   box-sizing: border-box;
   width: 100px;
   height: 40px;
-  border: 0;
+  border: none;
   border-radius: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 0.9em;
-  background-color: #c3ff00;
+  background-color: #0808bd;
+  color: #ffffff;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   transition-duration: 0ms.3s;
   :active {
@@ -62,7 +63,7 @@ const ModalBackground = styled.div`
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0.8;
   display: flex;
@@ -73,9 +74,9 @@ const ModalBackground = styled.div`
 const ModalContainer = styled.div`
   box-sizing: border-box;
   padding: 0.5em;
-  width: 80%;
+  width: 40%;
   height: 70%;
-  border-radius: 12px;
+  border-radius: 6px;
   background-color: #ffffff;
 `;
 
@@ -87,7 +88,7 @@ const CloseModal = styled.div`
 `;
 
 const CloseButton = styled.div`
-  margin: 0.5em;
+  margin: 0 0.3em;
   cursor: pointer;
   font-size: 1em;
   font-weight: 800;

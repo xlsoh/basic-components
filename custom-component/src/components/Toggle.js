@@ -39,7 +39,8 @@ const ToggleContainer = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  background-color: ${({ value }) => (value ? '#c3ff00' : '#9A9A9A')};
+  background-color: ${({ value }) =>
+    value ? '#0808bd' : 'rgba(0, 0, 0, 0.5);'};
 `;
 
 const Circle = styled.div`
