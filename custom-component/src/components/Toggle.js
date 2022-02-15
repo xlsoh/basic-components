@@ -22,8 +22,6 @@ function Toggle(params) {
 export default Toggle;
 
 const Container = styled.div`
-  font-weight: 350;
-  font-size: 1.1em;
   width: 100%;
   height: 100%;
   display: flex;

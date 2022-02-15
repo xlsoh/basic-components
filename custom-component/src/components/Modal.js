@@ -17,8 +17,12 @@ export default function Modal(params) {
       ) : (
         <ModalBackground>
           <ModalContainer>
-            <CloseButton onClick={handleModal}>✕</CloseButton>
-            Hello ☺︎
+            <CloseModal>
+              <CloseButton onClick={handleModal}>✕</CloseButton>
+            </CloseModal>
+            <ShowModal>
+              <ModalContent>Modal Content</ModalContent>
+            </ShowModal>
           </ModalContainer>
         </ModalBackground>
       )}
@@ -68,34 +72,32 @@ const ModalBackground = styled.div`
 
 const ModalContainer = styled.div`
   box-sizing: border-box;
-  padding: 5px;
+  padding: 0.5em;
   width: 80%;
   height: 70%;
   border-radius: 12px;
   background-color: #ffffff;
+`;
+
+const CloseModal = styled.div`
+  margin-right: 0.5em;
   display: flex;
+  align-items: end;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `;
 
 const CloseButton = styled.div`
-  box-sizing: border-box;
-  margin: 2px;
-  width: 80px;
-  height: 35px;
-  border: 0;
-  border-radius: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0.5em;
   cursor: pointer;
   font-size: 1em;
   font-weight: 800;
-  background-color: transparent;
-  :active {
-    margin: 2px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  }
-  transition-duration: 0ms.3s;
 `;
+
+const ShowModal = styled.div`
+  margin: 0.5em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+`;
+
+const ModalContent = styled.div``;

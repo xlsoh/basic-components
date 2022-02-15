@@ -47,21 +47,9 @@ function Tab(params) {
         )}
       </TabsMenu>
       <TabsContent>
-        {toggleMenu === 1 ? (
-          <ActiveContent>Tab Content 1</ActiveContent>
-        ) : (
-          <></>
-        )}
-        {toggleMenu === 2 ? (
-          <ActiveContent>Tab Content 2</ActiveContent>
-        ) : (
-          <></>
-        )}
-        {toggleMenu === 3 ? (
-          <ActiveContent>Tab Content 3</ActiveContent>
-        ) : (
-          <></>
-        )}
+        {toggleMenu === 1 ? <ActiveContent>Content 1</ActiveContent> : <></>}
+        {toggleMenu === 2 ? <ActiveContent>Content 2</ActiveContent> : <></>}
+        {toggleMenu === 3 ? <ActiveContent>Content3</ActiveContent> : <></>}
       </TabsContent>
     </Container>
   );
@@ -95,7 +83,6 @@ const ActiveTab = styled.span`
 
 const Tabs = styled.span`
   cursor: pointer;
-  font-size: 1rem;
   font-weight: 500;
   display: inline-block;
   padding: 1em;
@@ -103,8 +90,10 @@ const Tabs = styled.span`
 `;
 
 const TabsContent = styled.div`
-  margin: 1.5em;
+  margin: 1em;
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ActiveContent = styled.div``;

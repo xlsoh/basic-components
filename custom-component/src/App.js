@@ -66,8 +66,7 @@ const Wrapper = styled.div`
   border-radius: 12px;
   background-color: white;
   display: flex;
-  align-items: center;
-  justify-items: center;
+  align-items: stretch;
   justify-content: center;
   margin: 1em;
 `;
