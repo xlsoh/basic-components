@@ -10,79 +10,69 @@ function Tab(params) {
   };
 
   return (
-    <Wrapper>
-      <Container>
-        <TabsMenu>
-          {toggleMenu === 1 ? (
-            <ActiveTab value={toggleMenu}>Title 1</ActiveTab>
-          ) : (
-            <Tabs
-              onClick={() => {
-                ToggleTabs(1);
-              }}
-            >
-              Title 1
-            </Tabs>
-          )}
-          {toggleMenu === 2 ? (
-            <ActiveTab value={toggleMenu}>Title 2</ActiveTab>
-          ) : (
-            <Tabs
-              onClick={() => {
-                ToggleTabs(2);
-              }}
-            >
-              Title 2
-            </Tabs>
-          )}
-          {toggleMenu === 3 ? (
-            <ActiveTab value={toggleMenu}>Title 3</ActiveTab>
-          ) : (
-            <Tabs
-              onClick={() => {
-                ToggleTabs(3);
-              }}
-            >
-              Title 3
-            </Tabs>
-          )}
-        </TabsMenu>
-        <TabsContent>
-          {toggleMenu === 1 ? (
-            <ActiveContent>Tab Content 1</ActiveContent>
-          ) : (
-            <></>
-          )}
-          {toggleMenu === 2 ? (
-            <ActiveContent>Tab Content 2</ActiveContent>
-          ) : (
-            <></>
-          )}
-          {toggleMenu === 3 ? (
-            <ActiveContent>Tab Content 3</ActiveContent>
-          ) : (
-            <></>
-          )}
-        </TabsContent>
-      </Container>
-    </Wrapper>
+    <Container>
+      <TabsMenu>
+        {toggleMenu === 1 ? (
+          <ActiveTab value={toggleMenu}>Title 1</ActiveTab>
+        ) : (
+          <Tabs
+            onClick={() => {
+              ToggleTabs(1);
+            }}
+          >
+            Title 1
+          </Tabs>
+        )}
+        {toggleMenu === 2 ? (
+          <ActiveTab value={toggleMenu}>Title 2</ActiveTab>
+        ) : (
+          <Tabs
+            onClick={() => {
+              ToggleTabs(2);
+            }}
+          >
+            Title 2
+          </Tabs>
+        )}
+        {toggleMenu === 3 ? (
+          <ActiveTab value={toggleMenu}>Title 3</ActiveTab>
+        ) : (
+          <Tabs
+            onClick={() => {
+              ToggleTabs(3);
+            }}
+          >
+            Title 3
+          </Tabs>
+        )}
+      </TabsMenu>
+      <TabsContent>
+        {toggleMenu === 1 ? (
+          <ActiveContent>Tab Content 1</ActiveContent>
+        ) : (
+          <></>
+        )}
+        {toggleMenu === 2 ? (
+          <ActiveContent>Tab Content 2</ActiveContent>
+        ) : (
+          <></>
+        )}
+        {toggleMenu === 3 ? (
+          <ActiveContent>Tab Content 3</ActiveContent>
+        ) : (
+          <></>
+        )}
+      </TabsContent>
+    </Container>
   );
 }
 
 export default Tab;
 
-const Wrapper = styled.div`
-  box-sizing: border-box;
-  width: 70%;
-  height: 25%;
-  border: 1px solid #e1e5d9;
-  border-radius: 12px;
-  background-color: white;
-  align-items: center;
-  justify-content: center;
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
 `;
-
-const Container = styled.div``;
 
 const TabsMenu = styled.div`
   background-color: #edffb3;

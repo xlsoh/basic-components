@@ -5,40 +5,36 @@ function Toggle(params) {
   const [value, SetValue] = useState(false);
   console.log(value);
   return (
-    <Wrapper>
-      <Container
+    <Container>
+      <ToggleContainer
         onClick={() => {
           SetValue(!value);
         }}
         value={value}
       >
         <Circle value={value} />
-      </Container>
+      </ToggleContainer>
       <div>Toggle Switch {(value && <>ON</>) || <>OFF</>}</div>
-    </Wrapper>
+    </Container>
   );
 }
 
 export default Toggle;
 
-const Wrapper = styled.div`
-  box-sizing: border-box;
-  width: 70%; //너비
-  height: 25%; //높이
-  border: 1px solid #e1e5d9;
-  border-radius: 12px;
-  display: flex; //가운데 배열
-  flex-direction: column; // 줄줄이 배열
-  justify-content: center; //세로 중앙
-  align-items: center; // 가로 중앙
-  background-color: white;
+const Container = styled.div`
   font-weight: 350;
   font-size: 1.1em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
-const Container = styled.div`
+const ToggleContainer = styled.div`
   box-sizing: border-box;
-  margin: 0 5px;
+  margin: 1% 0;
   width: 80px;
   height: 35px;
   border-radius: 35px;

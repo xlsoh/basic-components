@@ -11,28 +11,24 @@ export default function Modal(params) {
   console.log(modal);
 
   return (
-    <Wrapper>
+    <Container>
       {!modal ? (
         <OpenButton onClick={handleModal}>Open Modal</OpenButton>
       ) : (
         <ModalBackground>
           <ModalContainer>
+            <CloseButton onClick={handleModal}>✕</CloseButton>
             Hello ☺︎
-            <CloseButton onClick={handleModal}>Close</CloseButton>
           </ModalContainer>
         </ModalBackground>
       )}
-    </Wrapper>
+    </Container>
   );
 }
 
-const Wrapper = styled.div`
-  box-sizing: border-box;
-  width: 70%;
-  height: 25%;
-  border: 1px solid #e1e5d9;
-  border-radius: 12px;
-  background-color: white;
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +36,6 @@ const Wrapper = styled.div`
 
 const OpenButton = styled.div`
   box-sizing: border-box;
-  margin: 0 5px;
   width: 100px;
   height: 40px;
   border: 0;
@@ -95,12 +90,12 @@ const CloseButton = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 0.9em;
-  background-color: #c3ff00;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  transition-duration: 0ms.3s;
+  font-size: 1em;
+  font-weight: 800;
+  background-color: transparent;
   :active {
     margin: 2px;
-    box-shadow: none;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
   }
+  transition-duration: 0ms.3s;
 `;

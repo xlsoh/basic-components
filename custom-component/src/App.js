@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Toggle from './components/Toggle';
 import Modal from './components/Modal';
 import Tab from './components/Tab';
-import './components/Tag';
+import Tag from './components/Tag';
 import './components/AutoComplete';
 import './components/ClickToEdit';
 
@@ -11,13 +11,25 @@ function App() {
   return (
     <AppContainer>
       <Title> Toggle</Title>
-      <Toggle />
+      <Wrapper>
+        <Toggle />
+      </Wrapper>
       <br />
       <Title>Modal</Title>
-      <Modal />
+      <Wrapper>
+        <Modal />
+      </Wrapper>
       <br />
       <Title>Tab</Title>
-      <Tab />
+      <Wrapper>
+        {' '}
+        <Tab />
+      </Wrapper>
+      <br />
+      {/* <Title>Tag</Title>
+      <Wrapper>
+        <Tag />
+      </Wrapper> */}
     </AppContainer>
   );
 }
@@ -44,4 +56,18 @@ const Title = styled.div`
   font-weight: 800;
   font-size: 1.6em;
   text-align: left;
+`;
+
+const Wrapper = styled.div`
+  box-sizing: border-box;
+  width: 70%;
+  height: 25%;
+  border: 1px solid #e1e5d9;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  margin: 1em;
 `;
