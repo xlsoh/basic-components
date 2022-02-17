@@ -4,6 +4,7 @@ import styled from 'styled-components';
 function Toggle(params) {
   const [value, SetValue] = useState(false);
   console.log(value);
+
   return (
     <Container>
       <ToggleContainer

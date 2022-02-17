@@ -3,18 +3,19 @@ import styled from 'styled-components';
 
 function Tag() {
   const [tags, setTags] = useState([]);
+  console.log(tags);
 
   const removeTags = (indexToRemove) => {
     setTags([...tags.filter((_, index) => index !== indexToRemove)]);
-    console.log(tags);
   };
+
   const addTags = (event) => {
     if (event.target.value !== '') {
       setTags([...tags, event.target.value]);
       event.target.value = '';
     }
-    console.log(tags);
   };
+
   return (
     <Container>
       <TagsInput>

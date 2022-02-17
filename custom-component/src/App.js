@@ -65,7 +65,6 @@ const AppContainer = styled.div`
 const Title = styled.div`
   font-weight: 800;
   font-size: 1.6em;
-  text-align: left;
 `;
 
 const Wrapper = styled.div`
