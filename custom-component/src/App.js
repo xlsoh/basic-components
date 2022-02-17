@@ -4,8 +4,9 @@ import Toggle from './components/Toggle';
 import Modal from './components/Modal';
 import Tab from './components/Tab';
 import Tag from './components/Tag';
-import './components/AutoComplete';
-import './components/ClickToEdit';
+import AutoComplete from './components/AutoComplete';
+import CickToEdit from './components/ClickToEdit';
+import ClickToEdit from './components/ClickToEdit';
 
 function App() {
   return (
@@ -29,6 +30,16 @@ function App() {
       <Wrapper>
         <Tag />
       </Wrapper>
+      <br />
+      <Title>AutoComplete</Title>
+      <Wrapper>
+        <AutoComplete />
+      </Wrapper>
+      <br />
+      <Title>ClickToEdit</Title>
+      <Wrapper>
+        <ClickToEdit />
+      </Wrapper>
     </AppContainer>
   );
 }
@@ -36,21 +47,19 @@ function App() {
 export default App;
 
 const AppContainer = styled.div`
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  padding-top: 3em;
-  padding-bottom: 5em;
+  margin-top: 5em;
+  margin-bottom: 5em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 2;
+  line-height: 2em;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  //background: linear-gradient(aliceblue, #8dc7e9);
-  //background: linear-gradient(#e5e7ff, #78bdff);
 `;
 
 const Title = styled.div`
@@ -64,11 +73,12 @@ const Wrapper = styled.div`
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
   width: 70%;
   height: 25%;
-  // border: 1px solid #e1e5d9;
+  min-height: 10em;
+  min-width: 18em;
   border-radius: 6px;
   background-color: rgba(242, 242, 242, 0.6);
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
-  margin: 1em;
+  margin: 0.5em;
 `;

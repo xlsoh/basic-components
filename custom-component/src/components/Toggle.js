@@ -22,6 +22,7 @@ function Toggle(params) {
 export default Toggle;
 
 const Container = styled.div`
+  padding: 1em;
   width: 100%;
   height: 100%;
   display: flex;

@@ -45,6 +45,7 @@ const OpenButton = styled.div`
   border: none;
   border-radius: 35px;
   display: flex;
+  margin: 1px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -54,7 +55,7 @@ const OpenButton = styled.div`
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   transition-duration: 0ms.3s;
   :active {
-    margin: 2px;
+    margin: 3px;
     box-shadow: none;
   }
 `;
@@ -63,6 +64,8 @@ const ModalBackground = styled.div`
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  min-height: 10em;
+  min-width: 18em;
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0.8;

@@ -63,6 +63,8 @@ export default Tab;
 const Container = styled.div`
   width: 100%;
   height: 100%;
+  min-height: 10em;
+  min-width: 18em;
 `;
 
 const TabsMenu = styled.div`
