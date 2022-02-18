@@ -96,7 +96,7 @@ const Container = styled.div`
 `;
 
 const AutoCompleteText = styled.div`
-  width: 100%;
+  width: 80%;
   border: 1px solid grey;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
   color: rgba(0, 0, 0, 0.73);
