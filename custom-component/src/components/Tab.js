@@ -86,6 +86,7 @@ const ActiveTab = styled.span`
   flex: 1;
   border-top-left-radius: ${({ value }) => (value === 1 ? '6px' : '0')};
   border-top-right-radius: ${({ value }) => (value === 3 ? '6px' : '0')};
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 `;
 
 const Tabs = styled.span`

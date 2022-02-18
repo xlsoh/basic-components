@@ -43,6 +43,7 @@ const ToggleContainer = styled.div`
   cursor: pointer;
   background-color: ${({ value }) =>
     value ? '#0808bd' : 'rgba(0, 0, 0, 0.5);'};
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 `;
 
 const Circle = styled.div`

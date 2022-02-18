@@ -52,8 +52,12 @@ const OpenButton = styled.div`
   font-size: 0.9em;
   background-color: #0808bd;
   color: #ffffff;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   transition-duration: 0ms.3s;
+  :hover {
+    margin: 3px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
   :active {
     margin: 3px;
     box-shadow: none;

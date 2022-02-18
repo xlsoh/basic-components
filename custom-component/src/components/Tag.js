@@ -54,7 +54,8 @@ const TagsInput = styled.div`
   width: 60%;
   margin: 10px 10px;
   padding: 0 8px;
-  border: 1px solid #e1e5d9;
+  border: 1px solid grey;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   &:focus-within {
     border: 1px solid #0545da;

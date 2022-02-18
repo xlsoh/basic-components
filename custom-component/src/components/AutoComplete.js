@@ -18,7 +18,7 @@ function AutoComplete() {
 
   const resetInput = () => {
     const obj = document.getElementsByClassName('input_obj');
-    for (const i = 0; i < obj.length; i++) {
+    for (let i = 0; i < obj.length; i++) {
       obj[i].value = '';
     }
   };
@@ -55,9 +55,7 @@ function AutoComplete() {
     return (
       <ul>
         {suggestionLists.map((suggestionKeywords) => (
-          <SuggestionItem key={suggestionKeywords}>
-            {suggestionKeywords}
-          </SuggestionItem>
+          <li key={suggestionKeywords}>{suggestionKeywords}</li>
         ))}
       </ul>
     );
@@ -65,7 +63,7 @@ function AutoComplete() {
 
   return (
     <Container>
-      <AutoCompleteInput>
+      <AutoCompleteText>
         <input
           type='text'
           onChange={(e) => {
@@ -74,16 +72,16 @@ function AutoComplete() {
           placeholder='Apple,Banana,Carrot,Durian. Choose One!'
           class='input_obj'
         />
-        <ResetButton
+        <button
           onClick={() => {
             resetSuggestionLists();
             resetInput();
           }}
         >
           ✕
-        </ResetButton>
-      </AutoCompleteInput>
-      <div>{renderSuggestions()}</div>
+        </button>
+        {renderSuggestions()}
+      </AutoCompleteText>
     </Container>
   );
 }
@@ -95,37 +93,42 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 `;
 
-const AutoCompleteInput = styled.div`
-  box-sizing: border-box;
-  display: flex;
-  width: 80%;
-  margin: 10px 10px;
-  padding: 0 8px;
-  border: 1px solid #e1e5d9;
-  border-radius: 6px;
-  &:focus-within {
-    border: 1px solid #0545da;
-  }
+const AutoCompleteText = styled.div`
+  width: 100%;
+  border: 1px solid grey;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.73);
   input {
-    border: none;
-    width: 80%;
-    height: 46px;
-    font-size: 14px;
     background-color: inherit;
-    padding: 4px 0 0 0;
-    &:focus {
-      outline: transparent;
-    }
+    width: 90%;
+    height: 40px;
+    border: none;
+    color: rgba(0, 0, 0, 0.73);
+    padding: 10px 5px;
+    box-sizing: border-box;
+    outline: none;
   }
-`;
-const ResetButton = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const SuggestionItem = styled.li`
-  list-style: none;
+  ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid grey;
+  }
+  li {
+    list-style: none;
+    padding: 0 0.4em;
+    cursor: pointer;
+    :hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    font-size: 0.9em;
+  }
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+  }
 `;
