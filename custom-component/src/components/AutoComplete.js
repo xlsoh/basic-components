@@ -23,6 +23,12 @@ function AutoComplete() {
     }
   };
 
+  const setInput = (e) => {
+    const obj = document.getElementsByClassName('input_obj');
+    const text = e.target.innerHTML;
+    obj[0].value = text;
+  };
+
   const resetSuggestionLists = () => {
     SetSuggestionLists([]);
   };
@@ -55,7 +61,14 @@ function AutoComplete() {
     return (
       <ul>
         {suggestionLists.map((suggestionKeywords) => (
-          <li key={suggestionKeywords}>{suggestionKeywords}</li>
+          <li
+            key={suggestionKeywords}
+            onClick={(e) => {
+              setInput(e);
+            }}
+          >
+            {suggestionKeywords}
+          </li>
         ))}
       </ul>
     );

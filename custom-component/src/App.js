@@ -5,7 +5,6 @@ import Modal from './components/Modal';
 import Tab from './components/Tab';
 import Tag from './components/Tag';
 import AutoComplete from './components/AutoComplete';
-import CickToEdit from './components/ClickToEdit';
 import ClickToEdit from './components/ClickToEdit';
 
 function App() {
