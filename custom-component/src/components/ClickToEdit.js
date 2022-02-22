@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 function ClickToEdit() {
-  const [info, SetInfo] = useState({ name: 'Park so hyun', age: 0 });
+  const [info, SetInfo] = useState({ name: 'Anne', age: 15 });
 
   const onChangeInfo = (e) => {
     const target = e.target;
@@ -25,6 +25,7 @@ function ClickToEdit() {
             <span>이름</span>
             <input
               type='text'
+              placeholder='Please enter your name'
               onChange={(e) => {
                 console.log(e.target.type);
                 onChangeInfo(e);
@@ -35,6 +36,7 @@ function ClickToEdit() {
             <span>나이</span>
             <input
               type='number'
+              placeholder='Please enter your age'
               onChange={(e) => {
                 onChangeInfo(e);
               }}
@@ -66,17 +68,21 @@ const ClickToEditInfo = styled.div`
     font-size: 1em;
   }
   input {
-    background-color: inherit;
-    width: 90%;
-    height: 40px;
-    color: rgba(0, 0, 0, 0.73);
-    padding: 10px 5px;
+    margin-left: 0.5em;
     box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid grey;
+    background-color: inherit;
+    color: rgba(0, 0, 0, 0.73);
+    margin-bottom: 1em;
+    padding: 1.5em 1em;
+    height: 30px;
+    width: 85%;
+    min-width: 15em;
   }
 `;
 
 const ShowInfo = styled.div`
-  margin-top: 1em;
-  font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
 `;
