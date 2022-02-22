@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 function AutoComplete() {
-  const [Keywords, SetKeywords] = useState([
+  const Keywords = [
     'a',
     'b',
     'c',
@@ -13,7 +13,7 @@ function AutoComplete() {
     'durian',
     'acorn',
     'blueberry',
-  ]);
+  ];
   const [suggestionLists, SetSuggestionLists] = useState([]);
 
   const resetInput = () => {
@@ -27,6 +27,7 @@ function AutoComplete() {
     const obj = document.getElementsByClassName('input_obj');
     const text = e.target.innerHTML;
     obj[0].value = text;
+    matchKeywords(text);
   };
 
   const resetSuggestionLists = () => {
@@ -34,20 +35,31 @@ function AutoComplete() {
   };
 
   const matchKeywords = (e) => {
-    const value = e.target.value;
-    console.log(value);
-
     const suggestion = [];
 
-    if (value.length === 0) {
-      resetSuggestionLists();
-    } else if (value.length > 0) {
-      Keywords.map((e) => {
-        const lowerValue = value.toLowerCase();
-        const keyLen = value.length;
-        const matchWords = e.toLowerCase().substring(0, keyLen);
+    if (typeof e === 'object') {
+      const value = e.target.value;
+
+      if (value.length === 0) {
+        resetSuggestionLists();
+      } else if (value.length > 0) {
+        Keywords.map((e) => {
+          const lowerValue = value.toLowerCase();
+          const keyLen = value.length;
+          const matchWords = e.toLowerCase().substring(0, keyLen);
+          if (lowerValue === matchWords) {
+            suggestion.push(e);
+          }
+          SetSuggestionLists(suggestion);
+        });
+      }
+    } else {
+      Keywords.map((k) => {
+        const lowerValue = e.toLowerCase();
+        const keyLen = e.length;
+        const matchWords = k.toLowerCase().substring(0, keyLen);
         if (lowerValue === matchWords) {
-          suggestion.push(e);
+          suggestion.push(k);
         }
         SetSuggestionLists(suggestion);
       });
