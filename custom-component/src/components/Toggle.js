@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+// useState로 swtich상태를 관리하여 ui에 반영.
+
 function Toggle(params) {
   const [value, SetValue] = useState(false);
   console.log(value);
